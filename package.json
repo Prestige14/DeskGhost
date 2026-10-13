@@ -1,0 +1,52 @@
+{
+  "name": "deskghost",
+  "version": "1.0.0",
+  "description": "The silent, local-first background agent that turns your chaotic Desktop & Downloads into an organized second brain using Multimodal AI.",
+  "type": "module",
+  "bin": {
+    "deskghost": "./dist/cli/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "node ./dist/cli/index.js start",
+    "test": "npm run build && node --test",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "desktop-organizer",
+    "ai",
+    "multimodal",
+    "ollama",
+    "gemini",
+    "local-first",
+    "file-manager",
+    "automation",
+    "undo"
+  ],
+  "author": "DeskGhost Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "better-sqlite3": "^11.8.1",
+    "chalk": "^5.4.1",
+    "chokidar": "^4.0.3",
+    "cli-table3": "^0.6.5",
+    "commander": "^13.1.0",
+    "micromatch": "^4.0.8",
+    "mime-types": "^2.1.35",
+    "node-notifier": "^10.0.1",
+    "pdf-parse": "^1.1.1",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/micromatch": "^4.0.6",
+    "@types/mime-types": "^2.1.4",
+    "@types/node": "^22.13.5",
+    "@types/node-notifier": "^8.0.5",
+    "@types/pdf-parse": "^1.1.4",
+    "typescript": "^5.7.3"
+  }
+}
